@@ -18,7 +18,7 @@ export default function OrderTrack() {
 
     try {
       const res = await fetch(
-        `https://mern-order-app-backend.vercel.app/api/orders/track?${
+        `https://shop-backend-91h1.onrender.com/api/orders/track?${
           searchType === "email" ? "email" : "id"
         }=${query.trim()}`
       );

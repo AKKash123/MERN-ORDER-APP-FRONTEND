@@ -16,7 +16,7 @@ export default function LoginPage() {
 
     try {
       // Send login data to backend (adjust route later)
-      const res = await fetch("https://mern-order-app-backend.vercel.app/api/auth/login", {
+      const res = await fetch("https://shop-backend-91h1.onrender.com/api/auth/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email, password }),

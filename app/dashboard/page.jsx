@@ -18,8 +18,8 @@ export default function AdminDashboard() {
     const fetchData = async () => {
       try {
         const [itemsRes, ordersRes] = await Promise.all([
-          fetch("https://mern-order-app-backend.vercel.app/api/items"),
-          fetch("https://mern-order-app-backend.vercel.app/api/orders"),
+          fetch("https://shop-backend-91h1.onrender.com/api/items"),
+          fetch("https://shop-backend-91h1.onrender.com/api/orders"),
         ]);
 
         // ✅ Check if both are valid JSON

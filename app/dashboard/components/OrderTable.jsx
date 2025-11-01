@@ -31,7 +31,7 @@ export default function OrderTable({ orders, setOrders }) {
   // ✅ Handle status update
   const handleStatusUpdate = async (orderId, newStatus) => {
     try {
-      const res = await fetch(`https://mern-order-app-backend.vercel.app/api/orders/${orderId}`, {
+      const res = await fetch(`https://shop-backend-91h1.onrender.com/api/orders/${orderId}`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ status: newStatus }),
@@ -57,7 +57,7 @@ export default function OrderTable({ orders, setOrders }) {
     if (!confirm("Are you sure you want to delete this order?")) return;
 
     try {
-      const res = await fetch(`https://mern-order-app-backend.vercel.app/api/orders/${id}`, {
+      const res = await fetch(`https://shop-backend-91h1.onrender.com/api/orders/${id}`, {
         method: "DELETE",
       });
 

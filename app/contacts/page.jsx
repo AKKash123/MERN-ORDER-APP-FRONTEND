@@ -25,7 +25,7 @@ export default function Contact() {
     setLoading(true);
     try {
       // Example: replace with your actual backend endpoint
-      const res = await fetch("https://mern-order-app-backend.vercel.app/api/contact", {
+      const res = await fetch("https://shop-backend-91h1.onrender.com/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),

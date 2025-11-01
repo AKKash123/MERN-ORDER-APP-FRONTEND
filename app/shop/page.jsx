@@ -21,7 +21,7 @@ export default function ShopPage() {
   useEffect(() => {
     const fetchItems = async () => {
       try {
-        const res = await fetch("https://mern-order-app-backend.vercel.app/api/items");
+        const res = await fetch("https://shop-backend-91h1.onrender.com/api/items");
         if (!res.ok) throw new Error("Failed to fetch items");
         const data = await res.json();
         setItems(data);
@@ -59,7 +59,7 @@ export default function ShopPage() {
         totalAmount: totalAmount,
       };
 
-      const res = await fetch("https://mern-order-app-backend.vercel.app/api/orders", {
+      const res = await fetch("https://shop-backend-91h1.onrender.com/api/orders", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(orderData),
@@ -108,7 +108,7 @@ export default function ShopPage() {
               <div className="relative h-56 bg-gray-100 flex items-center justify-center overflow-hidden">
                 {item.image ? (
                   <img
-                    src={`https://mern-order-app-backend.vercel.app${item.image}`}
+                    src={`https://shop-backend-91h1.onrender.com${item.image}`}
                     alt={item.name}
                     className="h-full w-full object-cover hover:scale-105 transition-transform duration-300"
                   />

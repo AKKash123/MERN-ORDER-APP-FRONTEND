@@ -25,7 +25,7 @@ export default function ItemTable({ items, setItems }) {
     if (form.image) formData.append("image", form.image);
 
     try {
-      const res = await fetch("https://mern-order-app-backend.vercel.app/api/items", {
+      const res = await fetch("https://shop-backend-91h1.onrender.com/api/items", {
         method: "POST",
         body: formData,
       });
@@ -44,7 +44,7 @@ export default function ItemTable({ items, setItems }) {
 
   // DELETE ITEM
   const handleDelete = async (id) => {
-    await fetch(`https://mern-order-app-backend.vercel.app/api/items/${id}`, { method: "DELETE" });
+    await fetch(`https://shop-backend-91h1.onrender.com/api/items/${id}`, { method: "DELETE" });
     setItems(items.filter((item) => item._id !== id));
   };
 
@@ -67,7 +67,7 @@ export default function ItemTable({ items, setItems }) {
 
   try {
     const res = await fetch(
-      `https://mern-order-app-backend.vercel.app/api/items/${editingItem._id}`,
+      `https://shop-backend-91h1.onrender.com/api/items/${editingItem._id}`,
       {
         method: "PUT",
         body: formData,
@@ -161,7 +161,7 @@ export default function ItemTable({ items, setItems }) {
                 <td className="p-3">
                   {item.image ? (
                     <img
-                      src={`https://mern-order-app-backend.vercel.app${item.image}`}
+                      src={`https://shop-backend-91h1.onrender.com${item.image}`}
                       alt={item.name}
                       className="h-18 w-18 object-cover"
                     />
